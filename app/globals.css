@@ -1913,3 +1913,179 @@ footer a:hover {
     text-align: center;
   }
 }
+
+/* Temporary event announcement shown once per browser session. */
+.event-modal-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 300;
+  display: grid;
+  place-items: center;
+  padding: 1.25rem;
+  overflow-y: auto;
+  background: rgba(12, 25, 16, 0.72);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  animation: eventBackdropIn 0.28s ease-out both;
+}
+
+.event-modal {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(220px, 0.8fr) minmax(300px, 1fr);
+  width: min(760px, 100%);
+  overflow: hidden;
+  border: 1px solid rgba(240, 217, 168, 0.52);
+  border-radius: 22px;
+  background: var(--color-cream);
+  box-shadow: 0 28px 90px rgba(0, 0, 0, 0.38);
+  animation: eventModalIn 0.35s 0.04s ease-out both;
+}
+
+.event-modal-flyer-wrap {
+  min-height: 100%;
+  background: var(--color-earth-light);
+}
+
+.event-modal-flyer {
+  display: block;
+  width: 100%;
+  height: 100%;
+  min-height: 430px;
+  object-fit: cover;
+  object-position: center;
+}
+
+.event-modal-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 3rem 2.5rem 2.3rem;
+  background:
+    var(--pattern-star),
+    linear-gradient(150deg, rgba(249, 245, 236, 0.98), rgba(232, 237, 230, 0.88));
+  background-size: 144px 144px, auto;
+}
+
+.event-modal-eyebrow {
+  margin: 0 0 0.85rem;
+  color: var(--color-canopy);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.event-modal h2 {
+  margin: 0 0 1rem;
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-style: italic;
+}
+
+.event-modal p:not(.event-modal-eyebrow) {
+  margin: 0 0 0.8rem;
+  color: rgba(33, 56, 32, 0.84);
+  font-size: 1rem;
+  line-height: 1.65;
+}
+
+.event-modal-ticket-link {
+  margin-top: 1rem;
+}
+
+.event-modal-dismiss {
+  margin-top: 1rem;
+  padding: 0.25rem 0;
+  color: var(--color-canopy);
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  cursor: pointer;
+}
+
+.event-modal-close {
+  position: absolute;
+  top: 0.75rem;
+  right: 0.75rem;
+  z-index: 2;
+  display: grid;
+  width: 2.25rem;
+  height: 2.25rem;
+  place-items: center;
+  border: 1px solid rgba(22, 39, 25, 0.18);
+  border-radius: 999px;
+  background: rgba(249, 245, 236, 0.94);
+  color: var(--color-evergreen);
+  cursor: pointer;
+  font-size: 1.75rem;
+  line-height: 1;
+  transition: background var(--transition-base), color var(--transition-base), transform var(--transition-base);
+}
+
+.event-modal-close:hover,
+.event-modal-close:focus-visible {
+  background: var(--color-evergreen);
+  color: var(--color-cream);
+  transform: rotate(90deg);
+}
+
+@keyframes eventBackdropIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes eventModalIn {
+  from {
+    opacity: 0;
+    transform: translateY(18px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@media (max-width: 640px) {
+  .event-modal-backdrop {
+    align-items: start;
+    padding: 0.75rem;
+  }
+
+  .event-modal {
+    grid-template-columns: 1fr;
+    margin-block: 0.35rem;
+    border-radius: 18px;
+  }
+
+  .event-modal-flyer {
+    min-height: 0;
+    max-height: 44vh;
+    aspect-ratio: 4 / 5;
+    object-position: center;
+  }
+
+  .event-modal-content {
+    padding: 1.65rem 1.4rem 1.45rem;
+  }
+
+  .event-modal h2 {
+    font-size: 2rem;
+  }
+
+  .event-modal p:not(.event-modal-eyebrow) {
+    font-size: 0.94rem;
+    line-height: 1.52;
+  }
+
+  .event-modal-ticket-link {
+    width: 100%;
+    justify-content: center;
+  }
+}

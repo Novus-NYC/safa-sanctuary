@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import { Analytics } from "@vercel/analytics/next";
+import EventAnnouncement from "@/components/event-announcement";
 import GlobalEffects from "@/components/global-effects";
 import SiteFooter from "@/components/site-footer";
 import SiteHeader from "@/components/site-header";
@@ -42,6 +43,7 @@ export default function RootLayout({
           <SiteFooter />
         </div>
         <GlobalEffects />
+        <EventAnnouncement />
         <Analytics />
       </body>
     </html>
