@@ -86,7 +86,7 @@ export default function EventAnnouncement() {
         </div>
         <div className="event-modal-content">
           <p className="event-modal-eyebrow">December 10 | 6 PM | Brooklyn, NY</p>
-          <h2 id="move-with-her-title">Make time for you.</h2>
+          <h2 id="move-with-her-title">Move With Her</h2>
           <p id="move-with-her-description">
             Join us for <strong>Move With Her</strong>, a chance to move your body,
             recharge, and connect with other women.
