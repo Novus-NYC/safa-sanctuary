@@ -124,7 +124,7 @@ export default function SiteFooter() {
               href="https://www.novusnyc.org/"
               target="_blank"
               rel="noopener noreferrer"
-              className="footer-link volta-link underline-offset-4 hover:underline"
+              className="footer-link novus-link underline-offset-4 hover:underline"
             >
               Novus
             </a>
