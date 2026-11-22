@@ -41,7 +41,10 @@ function HeroSection() {
         </h2>
         <p className="hero-desc reveal reveal-delay-3">{HERO_COPY}</p>
         <div className="hero-actions reveal reveal-delay-4">
-          <a href="/services" className="btn-primary">
+          <a href="/move-with-her#tickets" className="btn-primary">
+            Get Tickets
+          </a>
+          <a href="/services" className="btn-secondary">
             Explore Services
           </a>
           <a
