@@ -2144,3 +2144,128 @@ footer a:hover {
     justify-content: center;
   }
 }
+
+.event-ticket-hero {
+  padding-block: 5.5rem;
+}
+
+.event-ticket-hero-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(260px, 390px);
+  gap: clamp(2.5rem, 7vw, 7rem);
+  align-items: center;
+}
+
+.event-ticket-intro {
+  max-width: 620px;
+}
+
+.event-ticket-intro h1 {
+  margin: 0 0 1rem;
+}
+
+.event-ticket-kicker {
+  margin: 0 0 1.3rem;
+  color: var(--color-canopy);
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+}
+
+.event-ticket-intro .section-copy {
+  max-width: 58ch;
+  margin-bottom: 1.6rem;
+}
+
+.event-ticket-external-link {
+  display: block;
+  width: fit-content;
+  margin-top: 1rem;
+  color: var(--color-canopy);
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.event-ticket-flyer-frame {
+  overflow: hidden;
+  border: 1px solid rgba(22, 39, 25, 0.14);
+  border-radius: 20px;
+  box-shadow: var(--shadow-green-lift);
+}
+
+.event-ticket-flyer-frame img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.event-ticket-checkout {
+  padding-block: 5.5rem 6.5rem;
+}
+
+.event-ticket-checkout-intro {
+  max-width: 660px;
+  margin: 0 auto 2rem;
+  text-align: center;
+}
+
+.event-ticket-checkout-intro .section-copy {
+  margin: 0 auto;
+}
+
+.event-ticket-embed-card {
+  overflow: hidden;
+  padding: clamp(1rem, 3vw, 2rem);
+  border: 1px solid rgba(22, 39, 25, 0.13);
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.72);
+  box-shadow: var(--shadow-green-soft);
+}
+
+.zeffy-ticket-form-wrap {
+  min-height: 560px;
+}
+
+.zeffy-fallback {
+  display: grid;
+  min-height: 320px;
+  place-items: center;
+  align-content: center;
+  gap: 1rem;
+  text-align: center;
+}
+
+.zeffy-fallback p {
+  margin: 0;
+  color: var(--color-canopy);
+}
+
+@media (max-width: 768px) {
+  .event-ticket-hero {
+    padding-block: 3.5rem;
+  }
+
+  .event-ticket-hero-grid {
+    grid-template-columns: 1fr;
+    gap: 2.2rem;
+  }
+
+  .event-ticket-flyer-frame {
+    width: min(100%, 390px);
+    margin-inline: auto;
+  }
+
+  .event-ticket-checkout {
+    padding-block: 3.5rem 4rem;
+  }
+
+  .event-ticket-embed-card {
+    padding: 0.75rem;
+  }
+
+  .zeffy-ticket-form-wrap {
+    min-height: 620px;
+  }
+}

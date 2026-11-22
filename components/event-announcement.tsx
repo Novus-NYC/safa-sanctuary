@@ -1,11 +1,10 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import { useCallback, useEffect, useState } from "react";
 
 const EVENT_DISMISSAL_KEY = "safa-move-with-her-announcement-dismissed";
-const TICKETS_URL = "https://www.zeffy.com/en-US/ticketing/move-with-her";
-
 export default function EventAnnouncement() {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -92,14 +91,13 @@ export default function EventAnnouncement() {
             recharge, and connect with other women.
           </p>
           <p>Come solo or bring a friend. We&apos;d love to see you there!</p>
-          <a
+          <Link
             className="btn-primary event-modal-ticket-link"
-            href={TICKETS_URL}
-            target="_blank"
-            rel="noreferrer"
+            href="/move-with-her#tickets"
+            onClick={dismissAnnouncement}
           >
-            Get Your Tickets <span aria-hidden="true">&#8599;</span>
-          </a>
+            Get Your Tickets <span aria-hidden="true">&#8594;</span>
+          </Link>
           <button className="event-modal-dismiss" type="button" onClick={dismissAnnouncement}>
             Maybe later
           </button>
