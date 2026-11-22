@@ -40,21 +40,24 @@ function HeroSection() {
           </span>
         </h2>
         <p className="hero-desc reveal reveal-delay-3">{HERO_COPY}</p>
-        <div className="hero-actions reveal reveal-delay-4">
-          <a href="/move-with-her#tickets" className="btn-primary">
-            Get Tickets
-          </a>
+        <div className="hero-event-cta reveal reveal-delay-4">
+          <p className="hero-event-label">Move With Her | December 10</p>
+          <div className="hero-actions">
+            <a href="/move-with-her#tickets" className="btn-primary">
+              Get Move With Her Tickets
+            </a>
           <a href="/services" className="btn-secondary">
             Explore Services
           </a>
-          <a
-            href={INSTAGRAM_URL}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="btn-secondary"
-          >
-            Follow Our Instagram
-          </a>
+            <a
+              href={INSTAGRAM_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-secondary"
+            >
+              Follow Our Instagram
+            </a>
+          </div>
         </div>
       </div>
       <div className="hero-image-wrap reveal reveal-delay-2">
